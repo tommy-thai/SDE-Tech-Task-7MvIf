@@ -1,50 +1,24 @@
 # Senior Data Engineer Tech Task
 
 ## Introduction
-This technical challenge is designed to test your expertise in Python and SQL for ETL. 
-
-As a Senior Data Engineer, your task is to design a robust ETL pipeline to extract data from an open source API, carry out specified transformations (alternatively, transformations after loading), and load the data into a database (open for your choice but cloud preferred, otherwise local is fine e.g. sqlite3) for analysis. Specifically, you will work with JSONPlaceholder (https://jsonplaceholder.typicode.com/) to simulate working with data from a simple blogging platform. A separate SQL task is included to test additional SQL proficiency.
-
-**!!! NOTE: You are not required to spend more than 1.5 Hrs on this task. You are not expected to fully complete this task in this timeframe so if you get stuck, simply proceed with another part of this task and note in your README what steps you would have taken to complete the task.**
+This is the attempt to complete the assigned task by applicant Preeti Sharma.
+The database application used:
+local sqlite3
 
 ## Getting Started
-1. Read through all the instructions before starting.
-2. Clone this repository. Placeholder directories and files have been created to get you started.
-3. Set up a new Python virtual environment and install required dependencies.
-4. Follow the instructions outlined in the [Task Details](#task-details) section.
-   1. [ETL Challenge](#etl-challenge) - Build an ETL pipeline using Python and SQL.
-   2. [Analysis Challenge](#analysis-challenge) - Write SQL queries to answer the posed questions
-5. Write unit tests to cover your code.
+1. I started by cloning the git repo.
+2. I then installed sqlite3 on my computer.
+3. I attempted the Additional SQL Challenge first dedidated steps to create the database are included in the schema_setup.sql db folder
+4. I downloaded the .CSV file from the given google sheets link and formatted the date to YYYY-MM-DD format to work with my sqlite commands. Thes rest of the .CSV file formatting remains unchanged.
 
-## Task Details
+## Task Attempted
 ### ETL Challenge
-
-You may opt to use ELT processes instead of ETL. If you do, use your personal judgement on which steps should follow the 'Load' Step.
-
-1. **Extract**: Retrieve all posts and user data from the `/posts` and `/users` endpoints of JSONPlaceholder API.
-2. **Transform**:
-   - Parse any embedded JSON structures into a format suitable for your database.
-   - Add a computed `status` field to posts: if a post body exceeds 100 characters, set `status` to `lengthy`, and `concise` otherwise.
-   - Combine posts with user details based on `userId` to create enriched post records.
-3. **Load**:
-   - In your database, load the data into table(s) prefixed with your initials, e.g. John Smith will create tables prefixed `js_` 
-
+Unattempted
 ### Analysis Challenge
-Write SQL queries to answer the following questions:
-1. Find the top 5 users that post the longest posts (excl. the post title).
-2. For each of these top 5 users, calculate their average post length (incl. the post title).
-3. Identify the day of the week when the most `lengthy` posts are created (mock date using the `id` of posts as the day offset from the UNIX epoch).
-
-Make sure that your queries can be run against the database created in the ETL.
-
+I have attempted the first 2 analysis tasks not the 3rd. The SQL queries are attatched to teh righful SQL folder.
 ### Additional SQL challenge
-Please upload the `50000 Sales Records.csv` [(download link)](https://drive.google.com/file/d/1g0nZAHn46gEBUmoPaMVhAIF9t7-55AsA/view?usp=sharing) into your database/data warehouse.
+I have attempted and completed the 3 SQL tasks with detailed steps taken,evidence and SQL queries attatched to the righful folder.
 
-Write SQL queries to answer the following questions:
- 
-•	Retrieve total sales revenue, number of units sold, and average price per unit for each item type for the first quarter of 2017.
-•	Identify the top 3 item types by sales revenue for each region in the last quarter.
-•	Calculate the year-over-year growth in sales revenue for each item type.
 
 ## Deliverables
 1. [ ] **Python ETL** - A Python ETL pipeline script `main.py` that is ready to run.
@@ -62,8 +36,3 @@ Write SQL queries to answer the following questions:
 3. [ ] **Error Handling**: Gracefully handle potential errors or irregularities in inputs.
 4. [ ] **Testing**: Include unit tests to verify each part of the ETL process.
 5. [ ] **Documentation**: A clear README.md that explains setup, execution, any assumptions made, and any other information you would include in a README.
-
-## How To Submit Your Solution
-Branch this repository following named using this format `applicant-[yourGithubUsername]`, e.g. user `john-smith` should create a branch `applicant-john-smith`. Commit your changes to your branch, and send a pull request to the main branch. We will review your submission and get back to you with our feedback.
-
-Good luck!
